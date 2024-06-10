@@ -16,6 +16,8 @@ app.engine('.hbs', exphbs.engine({
 }));
 app.set('view engine', '.hbs');
 app.use(require('./routes/indexController'));
+app.use(require('./routes/authController'));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Starting
